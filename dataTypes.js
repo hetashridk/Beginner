@@ -73,5 +73,34 @@ let scoreInNumbersssss = Number(scoreddddd);  //Convert from string to number
 console.log(typeof scoreInNumbersssss);
 console.log(scoreInNumbersssss);
 
+//Symbol
+const id = Symbol('123');
+const anotherId = Symbol('123');
+console.log(id === anotherId);  //returns false:- as it is unique
+
 
 // Conversion can be Number, String, Boolean
+
+//Primitive:- 7 types => String, Number, Boolean, null, undefined, Symbol, BigInt => they are always call by value
+
+//Reference Type (Non-Primitve):- Arrays, Objects, Functions
+
+//JavaScript is a dynamically typed language. This means that variable types are determined at runtime, and you do not need to explicitly declare the type of a variable before using it. You can assign different types of values to a variable during its lifetime
+
+//Arrays
+const names = ["hetu", "hetashri", "sheetal"];
+console.log(typeof names);
+
+// Object
+let desc = {
+    name: "hetashri",
+    subject: "math",
+}
+console.log(typeof desc);
+
+
+//function
+const myFunction = function () {
+    console.log("Hello world");
+}
+console.log(typeof myFunction);
