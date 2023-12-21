@@ -104,3 +104,10 @@ const myFunction = function () {
     console.log("Hello world");
 }
 console.log(typeof myFunction);
+
+// Stack memory is used for Primitive
+// Means whichever the variable we have declare we will get the copy of that
+
+
+// Heap memory is used for Non-Primitive
+//Means whichever the object we have declare we will get the reference of that
