@@ -33,5 +33,5 @@ console.log(username.includes('dk'));
 console.log(username.includes('wala'));
 console.log(username.includes('-'));
 
-// split on the basic of given char/thing and stor it in array
+// split on the basic of given char/thing and store it in array
 console.log(username.split('@'));
