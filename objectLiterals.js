@@ -58,3 +58,73 @@ JsUser.hellojiyoo = function(){
 }
 
 console.log(JsUser.hellojiyoo());
+
+
+const user = {}
+
+user.id = "466abc"
+user.usernmae = "hetu"
+
+console.log(user);
+
+
+// object ni ander object:- nested object
+
+const allUser = {
+    id: "123abc",
+    fullname: {
+        firstname: {
+            name: "Hetashri",
+            nickname: "Hetu",
+        }
+    },
+    age: 21
+}
+
+console.log(allUser.fullname.firstname.nickname);
+
+
+// join object
+
+// give obj inside obj
+const obj1 = {user, allUser}
+console.log(obj1);  
+
+const obj2 = Object.assign({}, user, allUser);
+console.log(obj2); 
+
+const obj3 = {...user, ...allUser}
+console.log(obj3);
+
+
+// object inside array
+const emailUser = [
+    {
+        id: "123",
+        name: "Hetashri"
+    },
+    {
+        id: "456",
+        name: "Kansariwala"
+    },
+    {
+        id: "789",
+        name: "Dhaval"
+    },
+]
+console.log(emailUser);
+console.log(emailUser[1].name);
+
+
+// This all thing will store in an array form
+// to access all key
+console.log(Object.keys(user));
+
+// to access all values
+console.log(Object.values(user));
+
+// to see all the entries
+console.log(Object.entries(user));
+
+// to check if key/property exist or not
+console.log(user.hasOwnProperty('id'));
