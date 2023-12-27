@@ -1,0 +1,67 @@
+Javascript Exceution Context:- aapne Javascript me je pan file banaveli che te exceute kai rite thy
+
+=>jyare aapne Js ne koi code appiye to "GLOBAL EXCEUTION CONTEXT" {GEC} banse aj
+=>Jya pan GEC banse tya apne aene refernce aapisu using "this"
+
+=>badhano GEC alag hoi that is node, browser, bun etc
+
+--------------------------------------------------
+=>Browser ma GEC ni value "window object" aave
+--------------------------------------------------
+
+=>GEC exceute on a thread
+
+---------------------------------------------------
+=>Js is a sinlge threaded
+=>badhi vastu ek process hoi che
+---------------------------------------------------
+
+=>3 types of EC
+  1. GEC
+  2. Function EC
+  3. Eval EC (comes sometime in mongoose)
+
+=>Js code will execute in 2 phases
+  1. Memory creation phase/creation phase:- var/function etc ma khali jagya allocate thy, aene exceute nai kare
+  2. Exceution phase
+
+
+let val1 = 7;
+let val2 = 8;
+function addNum(num1, num2){
+    let total = num1 + num2
+    return total
+}
+
+let result1 = addNum(val1, val2);
+let result1 = addNum(7, 8);
+
+//How the above program will exceute
+
+1. GE/G enviroment:- koi pan program either it is long or short aene exceute GE thi aj thy so GE allocated in this
+
+2. Memory Creation Phase:- Val1 -> undefined
+                           Val2 -> undefined
+                           addNum -> defination
+                           result1 -> undefined
+                           result2 -> undefined
+
+3. Execution Phase:- Val <- 7
+                     Val2 <- 8
+                     addNum:- will make alag new EC -> first it will make the new Variable enviroment + Exceution thread
+
+                    1. Memory Creation Phase:- Val1 -> undefined
+                                                Val2 -> undefined
+                                                total -> undefined
+
+                    2. Exceution Control:- num1 -> 10
+                                           num2 -> 5
+                                           total -> 15 => will return in GEC
+                    Now EC will get delete
+
+                    -----------
+                    Now similarly step 3 will occur with result2
+                    ----------
+
+
+Call Stack
