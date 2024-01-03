@@ -97,3 +97,6 @@ const arrayObject = [
 arrayObject.forEach((item) => {
     console.log(item.clg);
 })
+
+// forEach loop doesn't return anything
+// if you do so it will return undefined
