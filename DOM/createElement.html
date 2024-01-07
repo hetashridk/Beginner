@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create Element</title>
+</head>
+<body style="background: #212121; color: azure;">
+    
+</body>
+
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+
+    //to add attribute
+    //to add classname
+    div.className = "addingClassname"    //<div class="addingClassname"></div>
+
+
+    //to add id
+    div.id = "addingidname"   //<div class="addingClassname" id="addingidname" ></div>
+
+    // also setting title that is attribute
+    div.setAttribute("title", "setting title")    //<div class="addingClassname" id="addingidname" title="setting title"></div>
+
+    div.style.background = "green"
+    div.innerHTML = "Hetashri"
+    //<div class="addingClassname" id="addingidname" title="setting title" style="background: green;">Hetashri</div>
+
+
+    // to view on browser
+    document.body.appendChild(div)
+</script>
+</html>
