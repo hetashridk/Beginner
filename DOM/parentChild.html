@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Parent Child</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <div class="parent">
+        <div class="one">YOOO</div>
+        <div class="one">YEAH</div>
+        <div class="one">YESSS</div>
+        <div class="one">HURRAH</div>
+    </div>
+
+    <script>
+        const parent = document.querySelector('.parent')
+        console.log(parent);
+        console.log(parent.children);    //.children will provide all collection
+        console.log(parent.children[1].innerHTML);   //will print YEAH
+        parent.children[2].style.color = "red"
+
+
+        // will print
+        //YOOO
+        //YEAH
+        // YESSS
+        // HURRAH
+        for (let index = 0; index < parent.children.length; index++) {
+            console.log(parent.children[index].innerHTML);
+        }
+
+
+        console.log(parent.firstElementChild);    //<div class="one">YOOO</div>
+        console.log(parent.lastElementChild);    //<div class="one">HURRAH</div>
+
+
+        //to access parent using child
+        const childAccess = document.querySelector('.one')
+        console.log(childAccess);     //<div class="one">YOOO</div>
+        console.log(childAccess.parentElement);     //will give parent
+        console.log(childAccess.nextElementSibling);     //will give sibling:- <div class="one">YEAH</div>
+
+    </script>
+</body>
+</html>
