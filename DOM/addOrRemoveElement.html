@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add or remove element</title>
+</head>
+<body>
+    <ul class="addEle">
+        <li>Yeah</li>
+    </ul>
+</body>
+
+<script>
+
+    // This is not optimal approach
+    function addElement(ele) {
+        const li = document.createElement('li')
+        li.innerHTML = `${ele}`
+        document.querySelector('.addEle').appendChild(li)
+    }
+    addElement("yoo")
+    addElement("yess")
+
+
+    // This is optimal approach
+    function addElementOptimal(ele) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(ele))
+        document.querySelector('.addEle').appendChild(li)
+    }
+    addElementOptimal('Hurrah')
+
+
+    // editing the textcontent
+    const thirdLang = document.querySelector('li:nth-child(3)')
+    const newli = document.createElement('li')
+    newli.textContent = "Alas!!"
+    thirdLang.replaceWith(newli)
+
+    // other way of editing
+    const firstLanf = document.querySelector('li:first-child')
+    firstLanf.outerHTML = '<li>yeoo</li>'
+
+
+    // to remove
+    const second = document.querySelector('li:nth-child(2)')
+    second.remove()
+</script>
+</html>
