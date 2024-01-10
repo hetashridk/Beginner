@@ -1,0 +1,17 @@
+By default Js is Synchronous and Single Threaded
+
+Single Threaded:- Ek aj thread ma badhu exceute thase so slow language but Js never feel us that they are slow, badha kam delicately thy
+
+Js  u engine che te baraber ke single threaded che to excution slow thy but at any place Js engine is never slow. Where ever we find Js Engine will find in the run time env, it will of either browser or node.js
+
+The all thing is all of Default Js 
+
+------------------------------------------------------------------
+Blocking Code vs Non Blocking Code
+
+Blocking Code:- It will block the flow of program
+                Read File Synchronously
+
+
+Non Blocking Code:- It will doesn't block the flow of program
+                    Read File ASynchronously
