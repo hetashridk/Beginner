@@ -13,11 +13,16 @@ const randomColor = () => {
 
 let setting
 document.querySelector("#start").addEventListener('click', () => {
-   setting =  setInterval(() => {
-        document.body.style.backgroundColor = randomColor();
-    }, 1000)
+
+    if(!setting){
+
+        setting =  setInterval(() => {
+             document.body.style.backgroundColor = randomColor();
+         }, 1000)
+    }
 })
 
 document.querySelector("#stop").addEventListener('click', () => {
     clearInterval(setting)
+    setting = null   //Because as after the clearance the setting varible will be null inshot the memory will clear
 })
