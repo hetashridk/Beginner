@@ -125,7 +125,7 @@ async function getAllUsers(){
 getAllUsers()
                            //or
 
-fetch('https://api.github.com/users/hetashridk')
+fetch('https://api.github.com/users/hetashridk')            //fetch will execute than all other functionality written above it
 .then((response) => {
     return response.json()
 })
