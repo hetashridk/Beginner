@@ -42,3 +42,60 @@ user1.print();    //user1 nu che to te user1 nu aj marks print karavse (usuage o
 // The constructor is called: The constructor function is called with the specified arguments and this is bound to the newly created object. If no explicit return value is specified from the constructor, JavaScript assumes this, the newly created object, to be the intended return value.
 
 // The new object is returned: After the constructor function has been called, if it doesn't return a non-primitive value (object, array, function, etc.), the newly created object is returned.
+
+
+let names = ["Jhone", "Elina"]
+
+let nickName = {
+    jhone: "Joy",
+    Elina:  "Sen"
+}
+
+// As we have learnt before that is at the object only or it will go via object only, so now we have declare a function for object
+//as the function is created for object so it accessible by all array, object, function and string too
+Object.prototype.power = () => {
+    console.log(`Power is here`);
+}
+
+names.power()
+nickName.power()
+
+// Another example
+let surname = "       lorem"
+
+Object.prototype.realLength = function() {
+    console.log(`${this}`);
+    console.log(`True length is ${this.trim().length}`);
+}
+
+surname.realLength()
+"vs      code".realLength()
+
+// Inheritance
+// That is protoTypill 
+const User = {
+    username: "xyz",
+    email: "xyz@gmail.com"
+}
+
+const user3 = {
+    worked: "yes"
+}
+
+const user4 = {
+    office: "no"
+}
+
+const user5 = {
+    workedfromhome: "yes",
+
+    // inheritance method 1
+    __proto__: user1
+}
+
+// inheritance method 2
+__proto__: user1
+
+// mordern syantax and also inheritance method 3
+Object.setPrototypeOf(user4, user5)
+
